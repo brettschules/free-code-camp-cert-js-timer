@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simon Says</title>
+  <title>Timer</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -18,13 +18,13 @@
 <body>
   <div class="text-center">
 
-<div id='set'>Set Time</div>
-<div>0:00</div>
+<div >Set Time</div>
+<div id='set'>0:00</div>
 <div class="row ">
-  <button type="button" class="btn btn-primary" id="increase">+</button>
-  <button type="button" class="btn btn-primary" id="decrease">-</button>
+  <button type="button" class="btn btn-primary" id="increase" onclick="increase()">+</button>
+  <button type="button" class="btn btn-primary" id="decrease" onclick="decrease()">-</button>
 </div>
-<div class="row"><button type="button" class="btn btn-primary" id="run">run</button>
+<div class="row"><button type="button" class="btn btn-primary" id="run" onclick="startTimer()">run</button>
 </div>
   <div id="time">05:00</div>
 </div>
