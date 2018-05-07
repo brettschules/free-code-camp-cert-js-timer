@@ -1,4 +1,7 @@
  var timerElement;
+ var timeInt = 0
+
+ var display;
  var hours = 0;
  var mintues = 0;
 
@@ -47,11 +50,13 @@ function formatTime(action) {
  h = h < 10 ? '0' + h : h;
  m = m < 10 ? '0' + m : m;
  timerElement.innerHTML = h + ':' + m;
- console.log(timerElement)
+ timeInt = numOfMinutes
 }
 
 
 function startTimer(duration, display) {
+  var duration = timeInt;
+   display = document.querySelector('#time');
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
@@ -63,7 +68,7 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+            timer = timeInt;
         }
     }, 1000);
 }
@@ -73,5 +78,5 @@ window.onload = function () {
         display = document.querySelector('#time');
         timerElement = document.getElementById('set')
 
-    startTimer(fiveMinutes, display);
+    // startTimer(timeInt, display);
 };
